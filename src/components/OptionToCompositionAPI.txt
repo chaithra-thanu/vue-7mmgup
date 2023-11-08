@@ -1,0 +1,12 @@
+data(){...} =======> ref(),reactive()
+methods:{do() {}}===> function do() {}
+computed: {val() {}}==> const val=computed()
+watch: {} ====> watch(dep,(val,oldV)=>{})
+provide:{}/ inject:[]===>provide('key',val)/ inject('key')
+
+
+Life Cycle (called under setup method for composition API)
+beforeCreate, created ===> setup()
+beforeMount, mounted ===> onBeforeMount, onMounted
+beforeUpdate, update ===> onBeforeUpdate, onUpdated
+beforeUnmount, unmounted ===> onBeforeUnmount, onUnmounted
